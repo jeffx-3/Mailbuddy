@@ -58,7 +58,7 @@ fun EmailScreen() {
             maxLines = 5
         )
         Button(onClick = { sendEmail(context, email, password, recipient, subject, message) }) {
-            Text("Send Email")
+            Text("Send")
         }
     }
 }
@@ -86,6 +86,6 @@ fun sendEmail(context: Context, email: String, password: String, recipient: Stri
         Toast.makeText(context, "Email sent successfully!", Toast.LENGTH_SHORT).show()
     } catch (e: Exception) {
         e.printStackTrace()
-        Toast.makeText(context, "Failed to send email.", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Failed to send email, please check and try again.", Toast.LENGTH_SHORT).show()
     }
 }
